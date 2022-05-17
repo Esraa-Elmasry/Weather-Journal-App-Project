@@ -24,23 +24,23 @@ app.listen(port, () => {
     console.log(`connected to port: ${port}`);
 });
 
-//get route
-// app.get('/all', (req, res) => {
-//    res.send(projectData);
-//    projectData = [];
-//    console.log(projectData, 'data');
-//    });
+////get route
+app.get('/all', (req, res) => {
+    res.send(projectData);
+    projectData = [];
+    console.log(projectData, 'data');
+    });
 
 //post route
-// app.post('/add', (req,res)=> {
-//     console.log(req.body);
-//     console.log(projectData);
-//     newEntry = {
-//         date:req.body.date,
-//        temp:req.body.temp,
-//        content:req.body.content
-//     }
-// res.send(newEntry);
-// console.log(newEntry);
-// projectData.push(newEntry);
-// });
+ app.post('/add', (req,res)=> {
+    console.log(req.body);
+   console.log(projectData);
+    newEntry = {
+      date:req.body.date,
+      temp:req.body.temp,
+       content:req.body.content
+     }
+ res.send(newEntry);
+ console.log(newEntry);
+ projectData.push(newEntry);
+ });
